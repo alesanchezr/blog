@@ -1,2 +1,5 @@
+
+image:
+  file: .gitpod.dockerfile
 tasks:
-  - common: hugo server --baseUrl $(gp url 1313) --appendPort=false;
+    - command: hugo server --baseUrl $(gp url 1313) --appendPort=false;
