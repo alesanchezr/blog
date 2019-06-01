@@ -1,0 +1,2 @@
+tasks:
+  - common: hugo server --baseUrl $(gp url 1313) --appendPort=false;
