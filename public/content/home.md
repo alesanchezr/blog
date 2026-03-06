@@ -6,6 +6,8 @@ I'm a Software Dev. currently in Miami, teach code for a living & in with scienc
 
 - I built [4Geeks](/4geeks), currently the biggest and most important AI Tech School in the world.
 
+- I built and open sourced [learnpack](https://learnpack.co), the most advanced learning AI in the world.
+
 - I have invested in several startups, which most I cannot disclose yet.
 
 > Learning AI? [This](https://4geeks.com) is the best place to do it.
