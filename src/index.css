@@ -1,5 +1,6 @@
-/* Theme: dark (default) and light via prefers-color-scheme */
-:root {
+/* Theme: dark (default) and light via data-theme on html */
+:root,
+[data-theme="dark"] {
   --bg: #1a1a1a;
   --text: #e6e6e6;
   --text-muted: #9ca3af;
@@ -9,16 +10,14 @@
   --link-hover: #bae6fd;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --text-muted: #6b7280;
-    --border: #e5e7eb;
-    --code-bg: #f3f4f6;
-    --link: #0284c7;
-    --link-hover: #0369a1;
-  }
+[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --code-bg: #f3f4f6;
+  --link: #0284c7;
+  --link-hover: #0369a1;
 }
 
 * {
@@ -145,4 +144,29 @@ body {
   padding-left: 1em;
   border-left: 4px solid var(--border);
   color: var(--text-muted);
+}
+
+/* Theme toggle: fixed top-right */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  color: var(--text);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  color: var(--link);
+  background: var(--border);
 }

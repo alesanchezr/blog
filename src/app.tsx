@@ -2,6 +2,7 @@ import { useState, useEffect } from 'preact/hooks'
 import { marked } from 'marked'
 import { MarkdownViewer } from './components/MarkdownViewer'
 import { Breadcrumb } from './components/Breadcrumb'
+import { ThemeToggle } from './components/ThemeToggle'
 import './app.css'
 
 function pathToContentUrl(pathname: string): string {
@@ -88,6 +89,7 @@ export function App() {
   if (loading) {
     return (
       <>
+        <ThemeToggle />
         <Breadcrumb pathname={pathname} onNavigate={handleNavigate} />
         <div class="state state-loading">Loading…</div>
       </>
@@ -97,6 +99,7 @@ export function App() {
   if (error) {
     return (
       <>
+        <ThemeToggle />
         <Breadcrumb pathname={pathname} onNavigate={handleNavigate} />
         <div class="state state-error">{error}</div>
       </>
@@ -105,6 +108,7 @@ export function App() {
 
   return (
     <>
+      <ThemeToggle />
       <Breadcrumb pathname={pathname} onNavigate={handleNavigate} />
       <MarkdownViewer html={html} />
     </>
